@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;
+  width: auto;
+}
+
+.galleryColumn {
+  background-clip: padding-box;
+}
+
+.galleryColumn > div {
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    margin-left: -2rem;
+  }
+
+  .galleryColumn {
+    padding-left: 2rem;
+  }
+
+  .galleryColumn > div {
+    margin-bottom: 3rem;
+  }
+}

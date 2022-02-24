@@ -1,0 +1,9 @@
+.home {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .home {
+    padding: 3rem 2rem;
+  }
+}
