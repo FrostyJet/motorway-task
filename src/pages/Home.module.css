@@ -1,5 +1,21 @@
 .home {
   padding: 2rem 1rem;
+  max-width: 180rem;
+  margin: auto;
+}
+
+.sampleFormBtn {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.sampleFormBtn:hover {
+  background-color: rgb(250, 250, 250);
 }
 
 @media (min-width: 768px) {

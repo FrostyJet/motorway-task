@@ -1,0 +1,71 @@
+.form {
+  max-width: 60rem;
+  padding: 2rem;
+  background-color: #fff;
+  margin: 2rem auto;
+  border: solid 1px #ededed;
+  border-radius: 1rem;
+}
+
+.fields {
+  display: grid;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup input:not([type="color"]) {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  border: solid 1px #ededed;
+}
+
+.formGroup input[type="color"] {
+  height: 4rem;
+  width: 8rem;
+}
+
+.formGroup label {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup .error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.submit {
+  background-color: #3db46d;
+  border: 1px solid #3fb86f;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.message {
+  font-size: 1.4rem;
+  color: #3fb86f;
+  padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .fields {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
