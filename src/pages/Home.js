@@ -51,6 +51,8 @@ const Home = () => {
       </button>
       <Form isOpen={isFormOpen} />
 
+      <button>Next Page</button>
+
       <div>{images ? <Gallery images={images} /> : "Loading..."}</div>
 
       {selectedImage && (

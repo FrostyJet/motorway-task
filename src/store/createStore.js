@@ -1,9 +1,18 @@
 import create from "zustand";
+import { persist } from "zustand/middleware";
 import createImagesSlice from "./createImagesSlice";
 
-const createStore = () =>
-  create((set, get) => ({
-    ...createImagesSlice(set, get),
-  }));
+export const createStore = () =>
+  create(
+    persist(
+      (set, get) => ({
+        ...createImagesSlice(set, get),
+      }),
+      {
+        name: "images",
+        getStorage: () => localStorage,
+      }
+    )
+  );
 
 export default createStore;
