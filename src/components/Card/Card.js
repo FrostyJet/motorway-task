@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
@@ -12,14 +12,18 @@ const Card = ({ index }) => {
   const image = useStore((state) => state.images[index]);
   const { user } = image;
 
-  const onZoomClick = () => {
+  const onZoomClick = useCallback(() => {
     setSelected(index);
-  };
+  }, [setSelected, index]);
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.user}>
-        <img className={styles.avatar} src={`${user.profile_image}.webp`} />
+        <img
+          className={styles.avatar}
+          src={`${user.profile_image}.jpg`}
+          alt={user.username}
+        />
         <div className={styles.name}>
           <span className={styles.nickname}>{user.username}</span>
           <span className={styles.location}>{user.location}</span>
@@ -30,7 +34,7 @@ const Card = ({ index }) => {
         <LazyLoadImage
           alt={image.alt}
           height={image.height}
-          src={`${image.url}.jpg`} // use normal <img> attributes as props
+          src={`${image.url}.jpg`}
           className={styles.image}
           width={image.width}
           placeholder={

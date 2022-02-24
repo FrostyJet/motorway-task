@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
 import { initialForm, schema } from "./constants";
@@ -19,17 +19,20 @@ const Form = ({ isOpen }) => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const onSubmit = (data) => {
-    reset();
-    setSubmitted(true);
+  const onSubmit = useCallback(
+    (data) => {
+      reset();
+      setSubmitted(true);
 
-    // just for demo
-    console.log(data);
+      // just for demo
+      console.log(data);
 
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
-  };
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    },
+    [reset]
+  );
 
   const renderInput = (name, label, type = "text") => (
     <div className={styles.formGroup}>
