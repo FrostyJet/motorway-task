@@ -1,13 +1,16 @@
+# Motorway UI Test results
 
-# Motorway UI Test
+<h4>Third party libraries</h4>
 
+1. `react-masonry-css`: for building responsive grid easily with dynamic height on each card
+2. `zustand`: for state management
+3. `react-hook-forms`: to display forms in optimized and performable way out of the box, and also handle the validations with their error messages
+4. `yup`: to define schema for validations and their error messages
+5. `react-lazy-load-image-component`: to start displaying images only when they appear on visible area of the screen
 
-Welcome to the Motorway UI technical test. This test focuses on user experience, and your skills with HTML, CSS, a11y and leveraging browser APIs.
-
+<hr /> 
 
 ## Set up
-
-This repo is a slightly modified Create React App and an Express server which serves a JSON feed of images.
 
 - Clone the repo and run `npm install`
 
