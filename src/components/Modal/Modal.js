@@ -26,20 +26,12 @@ const Modal = ({ isOpen, onClose, children }) => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
 
-  const onModalClick = (e) => {
-    e.stopPropagation();
-  };
-
   const element = (
     <div className={styles.wrapper}>
       <div className={styles.close} onClick={onClose}>
         <GrClose />
       </div>
-      <div
-        className={styles.modal}
-        onClick={onModalClick}
-        onKeyDown={onKeyDown}
-      >
+      <div className={styles.modal} onKeyDown={onKeyDown}>
         <div className={styles.content}>{children}</div>
       </div>
     </div>
